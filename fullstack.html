@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keerthy Suresh's Birthday Party Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("invitation.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .invitation-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .invitation-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="card">
+            <h1 class="card-header">Keerthy's Birthday Party</h1>
+            <p>Hello friends,</p>
+            <p>Come join me, Keerthy Suresh, as I celebrate my birthday in style!</p>
+            <p>Date: May 15, 2024<br>Time: 7:00 PM onwards<br>Location: Star Palace, Chennai</p>
+            <p>Please RSVP by May 05, 2024.</p>
+            <a href="#" class="invitation-btn" onclick="promptInfo()">RSVP Now</a>
+            <p>Looking forward to celebrating with you!</p>
+        </div>
+    </div>
+
+    <script>
+        function promptInfo() {
+            const name = prompt("Enter your name:");
+            const email = prompt("Enter your email:");
+            const message = prompt("Enter your message (optional):");
+
+            if (name && email) {
+                displayInvitation(name, email, message);
+            } else {
+                alert("Name and email are required!");
+            }
+        }
+
+        function displayInvitation(name, email, message) {
+            var invitation = "Hello " + name + ",\n\n";
+            invitation += "You're invited to join Keerthy's birthday party!\n\n";
+            invitation += "Date: May 15, 2024\n";
+            invitation += "Time: 7:00 PM onwards\n";
+            invitation += "Location: Star Palace, Chennai\n\n";
+            invitation += "Looking forward to celebrating with you!\n\n";
+            invitation += "Best regards,\nKeerthy Suresh";
+
+            if (message) {
+                invitation += "\n\nMessage from you: " + message;
+            }
+
+            alert(invitation);
+        }
+    </script>
+    <footer style="text-align:center; padding: 10px; color:#444;">
+        © 2025 Keerthy's Birthday Bash. All rights reserved.
+    </footer>
+    </body>
+</html>
